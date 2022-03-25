@@ -6,7 +6,7 @@
 /*   By: mberkenb <mberkenb@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/26 15:05:25 by mberkenb      #+#    #+#                 */
-/*   Updated: 2022/02/09 10:53:00 by mberkenb      ########   odam.nl         */
+/*   Updated: 2022/03/25 16:17:29 by mberkenb      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	*manage_threads(void *t_void)
 	philo = (t_philo *)t_void;
 	usleep (100);
 	fork_managment(philo);
-	while (1 && !change_dead_locked(philo, 1))
+	while (!change_dead_locked(philo, 1))
 	{
 		usleep(10);
 		actions(philo);
